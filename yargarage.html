@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЯрГараж — Сварочные работы в Ярославле</title>
+<meta name="description" content="Сварка порогов, арок, днища, глушителей, рам и лонжеронов в Ярославле. Мастер с опытом 5 лет. Работаем без выходных. Цены от 1000 ₽.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --orange: #E8500A;
+    --orange-dark: #B83D06;
+    --orange-light: #FFF0E8;
+    --black: #111010;
+    --gray-dark: #2A2A2A;
+    --gray-mid: #6B6B6B;
+    --gray-light: #F4F3F1;
+    --gray-border: #E2E0DC;
+    --white: #FFFFFF;
+    --font-display: 'Unbounded', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--gray-border);
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-logo-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    color: var(--gray-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--black); }
+
+  .nav-cta {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+    background: var(--orange);
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--orange-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 72px 24px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange);
+    background: var(--orange-light);
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--black);
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--orange);
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: var(--gray-mid);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 440px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .btn-primary {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    background: var(--orange);
+    border: none;
+    padding: 13px 24px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .btn-primary:hover { background: var(--orange-dark); }
+  .btn-primary:active { transform: scale(0.98); }
+
+  .btn-secondary {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    background: var(--white);
+    border: 1.5px solid var(--gray-border);
+    padding: 13px 24px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .btn-secondary:hover { border-color: #aaa; background: var(--gray-light); }
+
+  .hero-trust {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--gray-mid);
+  }
+
+  .trust-item svg { color: var(--orange); flex-shrink: 0; }
+
+  /* hero photo side */
+  .hero-visual {
+    position: relative;
+  }
+
+  .hero-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 160px;
+    gap: 8px;
+  }
+
+  .hero-photo {
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-photo:first-child {
+    grid-row: 1 / 3;
+    grid-column: 1;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #bbb;
+    font-size: 11px;
+    text-align: center;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .photo-placeholder svg { opacity: 0.3; }
+
+  .hero-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* ── DIVIDER ── */
+  .divider-strip {
+    background: var(--gray-light);
+    border-top: 1px solid var(--gray-border);
+    border-bottom: 1px solid var(--gray-border);
+    padding: 16px 24px;
+  }
+
+  .divider-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--gray-mid);
+  }
+
+  .stat-sep {
+    width: 1px;
+    height: 28px;
+    background: var(--gray-border);
+    flex-shrink: 0;
+  }
+
+  /* ── SECTIONS COMMON ── */
+  section {
+    padding: 64px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+
+  /* ── SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: 12px;
+    padding: 22px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--orange);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .service-card:hover { border-color: #ccc; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--orange-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    color: var(--orange);
+  }
+
+  .service-name {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .service-desc {
+    font-size: 12px;
+    color: var(--gray-mid);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .service-price {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--orange);
+  }
+
+  /* ── WHY ── */
+  .why-section {
+    background: var(--black);
+    max-width: 100%;
+    padding: 64px 24px;
+  }
+
+  .why-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .why-section .section-title {
+    color: var(--white);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .why-item {
+    background: var(--gray-dark);
+    padding: 28px 24px;
+    transition: background 0.2s;
+  }
+
+  .why-item:hover { background: #333; }
+
+  .why-num {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .why-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .why-desc {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* ── PORTFOLIO ── */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .portfolio-item {
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--gray-light);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+
+  .portfolio-item:hover img { transform: scale(1.03); }
+
+  .portfolio-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 9px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+
+  .photo-placeholder-port {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ccc;
+    font-size: 11px;
+  }
+
+  .portfolio-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--gray-mid);
+    text-align: center;
+  }
+
+  /* ── PRICES ── */
+  .prices-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gray-border);
+  }
+
+  .prices-table thead {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .prices-table th {
+    padding: 14px 20px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .prices-table td {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--gray-border);
+    vertical-align: middle;
+  }
+
+  .prices-table tbody tr:last-child td { border-bottom: none; }
+
+  .prices-table tbody tr:hover { background: var(--gray-light); }
+
+  .price-val {
+    font-weight: 500;
+    color: var(--orange);
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 12px;
+    color: var(--gray-mid);
+    margin-top: 3px;
+  }
+
+  .prices-disclaimer {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--gray-mid);
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--orange);
+    max-width: 100%;
+    padding: 64px 24px;
+  }
+
+  .cta-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+  }
+
+  .cta-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 13px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta-btn:active { transform: scale(0.98); }
+
+  .cta-btn-phone {
+    background: var(--white);
+    color: var(--orange-dark);
+  }
+
+  .cta-btn-phone:hover { background: #f0ede9; }
+
+  .cta-btn-wa {
+    background: #25D366;
+    color: var(--white);
+  }
+
+  .cta-btn-wa:hover { background: #1fba59; }
+
+  .cta-btn-tg {
+    background: #229ED9;
+    color: var(--white);
+  }
+
+  .cta-btn-tg:hover { background: #1a8ac3; }
+
+  .cta-btn-avito {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.3);
+  }
+
+  .cta-btn-avito:hover { background: rgba(255,255,255,0.22); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    padding: 28px 24px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .footer-logo-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--orange);
+    border-radius: 50%;
+  }
+
+  .footer-meta {
+    font-size: 12px;
+    color: #555;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 40px 16px 48px;
+      gap: 32px;
+    }
+
+    .hero-photo-grid {
+      grid-template-rows: 180px 120px;
+    }
+
+    .nav-links { display: none; }
+
+    .portfolio-grid { grid-template-columns: 1fr 1fr; }
+
+    .cta-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-contacts {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .why-grid { gap: 2px; }
+
+    section { padding: 48px 16px; }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── UTILS ── */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    ЯрГараж
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#prices">Цены</a></li>
+    <li><a href="#portfolio">Работы</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul>
+  <a href="tel:+79806522008" class="nav-cta">Позвонить</a>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1100px;margin:0 auto;">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Ярославль · Сварка авто</div>
+      <h1>Свариваем всё,<br>от чего<br><em>другие отказались</em></h1>
+      <p class="hero-desc">Пороги, арки, днище, глушители, рамы, лонжероны — берёмся за любой ремонт. Работаем без выходных. Без посредников — цена честная.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/79806522008" class="btn-primary" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Написать в WhatsApp
+        </a>
+        <a href="#portfolio" class="btn-secondary">
+          Смотреть работы
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          5 лет опыта
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Работаем без выходных
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          Беремся за сложные случаи
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-photo-grid">
+        <div class="hero-photo">
+          <!-- ФОТО ГЕРОЙ 1: вставь ссылку на фото в src -->
+          <img src="https://disk.yandex.ru/i/Ibo5Y6YY7MRk3g" alt="Сварочные работы ЯрГараж" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="hero-badge">📍 Ярославль</span>
+        </div>
+        <div class="hero-photo">
+          <!-- ФОТО ГЕРОЙ 2: вставь ссылку на фото в src -->
+          <img src="https://disk.yandex.ru/i/KSUbk-ER6_0sNQ" alt="До и после сварки" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="hero-photo">
+          <!-- ФОТО ГЕРОЙ 3: вставь ссылку на фото в src -->
+          <img src="https://disk.yandex.ru/i/HX3NrCQPTu3fYw" alt="До и после сварки" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="divider-strip">
+  <div class="divider-inner">
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">лет в деле</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="stat-num">от&nbsp;1 000&nbsp;₽</span>
+      <span class="stat-label">сварочные работы</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="stat-num">7/7</span>
+      <span class="stat-label">работаем без выходных</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="stat-num">0</span>
+      <span class="stat-label">посредников — только мастер</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow">Что делаем</div>
+  <div class="section-title">Услуги</div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <div class="service-name">Пороги и арки</div>
+      <div class="service-desc">Переварка, частичная замена, вставки. Работаем со ржавчиной — берёмся за кузова, от которых другие отказались.</div>
+      <div class="service-price">от 12 000 ₽</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="service-name">Днище</div>
+      <div class="service-desc">Заплатки, переварка участков, полная замена листов днища. Точная подгонка металла.</div>
+      <div class="service-price">цена по фото</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="service-name">Глушитель</div>
+      <div class="service-desc">Заварка трещин, ремонт банок и гофр. Быстро и без замены всего узла.</div>
+      <div class="service-price">от 1 000 ₽</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="service-name">Ремонт бамперов</div>
+      <div class="service-desc">Сварка пластика, усиление арматуры. Выглядит как заводское — без замены бампера.</div>
+      <div class="service-price">от 1 000 ₽</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="service-name">Рамы и лонжероны</div>
+      <div class="service-desc">Силовые элементы кузова: усиление, правка, переварка. Работаем с внедорожниками и коммерческим транспортом.</div>
+      <div class="service-price">цена по фото</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M19.07 19.07l-1.41-1.41M4.93 19.07l1.41-1.41M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+      </div>
+      <div class="service-name">Другие сварочные работы</div>
+      <div class="service-desc">Если не нашли свой вопрос — просто пришлите фото. Скажу цену и сроки без «приезжайте посмотрим».</div>
+      <div class="service-price">пришлите фото</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<div class="why-section">
+  <div class="why-inner">
+    <div class="section-eyebrow" style="color:#E8500A;">Почему выбирают</div>
+    <div class="section-title">Честно о том, как мы работаем</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">5 лет</div>
+        <div class="why-title">Опыт без регалий</div>
+        <div class="why-desc">Работаю руками с 2019 года. Каждый шов — моя репутация.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">7/7</div>
+        <div class="why-title">Без выходных</div>
+        <div class="why-desc">Приезжайте в субботу и воскресенье — работаем в обычном режиме.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">0</div>
+        <div class="why-title">Никаких посредников</div>
+        <div class="why-desc">Вы платите мастеру напрямую — без накруток сервиса или менеджеров.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">100%</div>
+        <div class="why-title">Берёмся за сложное</div>
+        <div class="why-desc">Ржавые кузова, сложные участки — не отказываем там, где другие пасуют.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-eyebrow">Примеры работ</div>
+  <div class="section-title">До&nbsp;и после</div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="https://disk.yandex.ru/i/mJkM765cIOZ8TQ" alt="Пороги до ремонта" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <span class="portfolio-label">Пороги · до</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://disk.yandex.ru/i/a5IirzIzmGsA5Q" alt="Пороги после ремонта" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <span class="portfolio-label">Пороги · после</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://disk.yandex.ru/i/Vmydlb2BHlBUeQ" alt="Пороги" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <span class="portfolio-label">Арки · до</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://disk.yandex.ru/i/DfRQN5C-PnLpag" alt="Работаем с грузовыми авто" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <span class="portfolio-label">Арки · после</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://disk.yandex.ru/i/Ibo5Y6YY7MRk3g" alt="Ремонт глушителя" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <span class="portfolio-label">Глушитель · ремонт</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://disk.yandex.ru/i/gWI_JWwVJ-14KQ" alt="Заплатка днища" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <span class="portfolio-label">Днище · заплатка</span>
+    </div>
+  </div>
+  <p class="portfolio-note">Есть вопросы по конкретному случаю? Пришлите фото — оценю за 5 минут.</p>
+</section>
+
+<!-- PRICES -->
+<section id="prices" style="padding-top:0;">
+  <div class="section-eyebrow">Прозрачно</div>
+  <div class="section-title">Примерные цены</div>
+  <table class="prices-table">
+    <thead>
+      <tr>
+        <th>Услуга</th>
+        <th>Цена</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Сварочные работы (заплатка, шов, мелкий ремонт)
+          <div class="price-note">Зависит от объёма и сложности</div>
+        </td>
+        <td><span class="price-val">от 1 000 ₽</span></td>
+      </tr>
+      <tr>
+        <td>
+          Ремонт бампера
+          <div class="price-note">Сварка пластика, арматуры</div>
+        </td>
+        <td><span class="price-val">от 1 000 ₽</span></td>
+      </tr>
+      <tr>
+        <td>
+          Пороги
+          <div class="price-note">Один порог, с вырезкой и обваркой</div>
+        </td>
+        <td><span class="price-val">от 12 000 ₽</span></td>
+      </tr>
+      <tr>
+        <td>
+          Арки, днище, глушитель, рамы, лонжероны
+          <div class="price-note">Цена зависит от состояния и объёма — пришлите фото</div>
+        </td>
+        <td><span class="price-val">по фото</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="prices-disclaimer">Цены ориентировочные. Точную стоимость скажу после фото или осмотра — без лишних слов и накруток.</p>
+</section>
+
+<!-- CTA -->
+<div class="cta-section" id="contacts">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-title">Пришлите фото — отвечу сразу</div>
+      <p class="cta-sub">Напишите в WhatsApp или Telegram, прикрепите фото или видео — скажу цену и сроки без «приезжайте посмотрим». Работаем без выходных.</p>
+    </div>
+    <div class="cta-contacts">
+      <a href="tel:+79806522008" class="cta-btn cta-btn-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +7 980 652-20-00
+      </a>
+      <a href="https://wa.me/79806522008" class="cta-btn cta-btn-wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://t.me/79806522008" class="cta-btn cta-btn-tg" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.981l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.963.578z"/></svg>
+        Telegram
+      </a>
+      <a href="https://www.avito.ru/yaroslavl/predlozheniya_uslug/svarka_porogov_arok_dnischa_svarka_glushitelya_7578129498" class="cta-btn cta-btn-avito" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        Авито
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="#" class="footer-logo">
+      <span class="footer-logo-dot"></span>
+      ЯрГараж
+    </a>
+    <span class="footer-meta">Вячеслав Бронников · Ярославль · © 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
